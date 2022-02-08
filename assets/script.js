@@ -5,10 +5,10 @@ let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
 
+
 let gbQty = document.querySelector('#qty-gb')
 let ccQty = document.querySelector('#qty-cc')
 let sugarQty = document.querySelector('#qty-sugar')
-let total = document.querySelector('#qty-total')
 const gbPlusBtn = document.querySelector('#add-gb')
 let minusGbBtn = document.querySelector('#minus-gb')
 let sugarPlusBtn = document.querySelector('#add-sugar')
@@ -59,3 +59,16 @@ sugarMinusBtn.addEventListener('click', function(){
     }
     
 })
+
+let array = [
+    gb,
+    cc,
+    sugar
+];
+let sum = 0
+
+for(let i = 0; i < array.length; i++){
+    sum + array[i];
+}
+
+console.log(sum)
