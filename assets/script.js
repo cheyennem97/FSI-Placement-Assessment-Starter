@@ -9,6 +9,8 @@ let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
 
 let gbQty = document.querySelector('#qty-gb')
+let ccQty = document.querySelector('#qty-cc')
+let sugarQty = document.querySelector('#qty-sugar')
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit')
 // selecting the element with an id of add-gb
@@ -23,42 +25,37 @@ credit.textContent = `Created by ${yourName}`
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function() {
     gb++
-    gbQty.textContent = ${gb}
-// HINT: You can delete this console.log after you no longer need it!
-
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+    gbQty.textContent = gb
 })
 
 minusGbBtn.addEventListener('click', function() {
     gb--
-console.log(gb)
+    gbQty.textContent = gb
 })
 
 let ccPlusBtn = document.querySelector('#add-cc')
-
 let ccMinusBtn = document.querySelector('#minus-cc')
 
 ccPlusBtn.addEventListener('click', function(){
     cc++
-    console.log(cc)
+    ccQty.textContent = cc
 })
 
 ccMinusBtn.addEventListener('click', function(){
     cc--
-    console.log(cc)
+    ccQty.textContent = cc
 })
 
 let sugarPlusBtn = document.querySelector('#add-sugar')
-
 let sugarMinusBtn = document.querySelector('#minus-sugar')
 
 sugarPlusBtn.addEventListener('click', function(){
     sugar++
-    console.log(sugar)
+    sugarQty.textContent = sugar
 })
 
 sugarMinusBtn.addEventListener('click', function(){
     sugar--
-    console.log(sugar)
+    sugarQty.textContent = sugar
 })
 // TODO: Hook up event listeners for the rest of the buttons
