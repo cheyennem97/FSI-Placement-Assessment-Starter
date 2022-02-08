@@ -4,11 +4,13 @@ let yourName = "Cheyenne Roach" // HINT: Replace this with your own name!
 let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
+let total = 0
 
 
 let gbQty = document.querySelector('#qty-gb')
 let ccQty = document.querySelector('#qty-cc')
 let sugarQty = document.querySelector('#qty-sugar')
+let totalQty = document.querySelector('#qty-total')
 const gbPlusBtn = document.querySelector('#add-gb')
 let minusGbBtn = document.querySelector('#minus-gb')
 let sugarPlusBtn = document.querySelector('#add-sugar')
@@ -24,7 +26,12 @@ credit.textContent = `Created by ${yourName}`
 gbPlusBtn.addEventListener('click', function() {
     gb++
     gbQty.textContent = gb
+});
+gbPlusBtn.addEventListener('click', function(){
+    total++
+    totalQty.textContent = total
 })
+
 
 minusGbBtn.addEventListener('click', function() {
     if (gb >0){
@@ -32,11 +39,21 @@ minusGbBtn.addEventListener('click', function() {
         gbQty.textContent = gb
     }
     
+});
+minusGbBtn.addEventListener('click', function(){
+    if (total >0){
+        total--
+        totalQty.textContent = total
+    }
 })
 
 ccPlusBtn.addEventListener('click', function(){
     cc++
     ccQty.textContent = cc
+});
+ccPlusBtn.addEventListener('click', function(){
+    total++
+    totalQty.textContent = total
 })
 
 ccMinusBtn.addEventListener('click', function(){
@@ -45,11 +62,21 @@ ccMinusBtn.addEventListener('click', function(){
         ccQty.textContent = cc
     }
     
+});
+ccMinusBtn.addEventListener('click', function(){
+    if (total >0){
+        total--
+        totalQty.textContent = total
+    }
 })
 
 sugarPlusBtn.addEventListener('click', function(){
     sugar++
     sugarQty.textContent = sugar
+});
+sugarPlusBtn.addEventListener('click', function(){
+    total++
+    totalQty.textContent = total
 })
 
 sugarMinusBtn.addEventListener('click', function(){
@@ -58,17 +85,11 @@ sugarMinusBtn.addEventListener('click', function(){
         sugarQty.textContent = sugar
     }
     
+});
+sugarMinusBtn.addEventListener('click', function(){
+    if (total >0){
+        total--
+        totalQty.textContent = total
+    }
 })
 
-let array = [
-    gb,
-    cc,
-    sugar
-];
-let sum = 0
-
-for(let i = 0; i < array.length; i++){
-    sum + array[i];
-}
-
-console.log(sum)
